@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Psychic Game</title>
+</head>
+<body>
+
+<h1>The Psychic Game</h1>
+<p>Guess what letter I'm thinking of!</p>
+<br>
+ <script type="text/javascript">
+
+ // Start Wins and Losses at 0, Guesses Left at 10
+
+// Generate a random letter of the alphabet. Include both upper and lower cases so that we don't have to convert user input to lower case.
+
+	function random_character() {
+ 
+ 		var chars = "ABCDEFGHIJKLMNOPQURSTUVWXYZabcdefghijklmnopqurstuvwxyz";
+    
+    	return chars.substr( Math.floor(Math.random() * 62), 1);
+	}	 	
+ 	
+ 	var rchar = random_character();
+
+	console.log(rchar);
+
+// Invite player to guess; maximum of 10 guesses.
+
+var userInput = prompt("Please input your guess (i.e. A to Z).");
+
+for (var i = 0; i < 10; i++) {
+
+	if (rchar = userInput[i]) {
+		// Informs player s/he has won
+		alert("You won!");
+
+		// Add one to # Wins
+
+		// Generate new random character, restart game
+		console.log(rchar);
+	}	
+
+	else {
+
+		// -1 to # Guesses Left
+
+		// add/print the wrong guess to Your Guesses So Far
+
+	}
+} 
+	
+// After 10 wrong guesses, prompt answer, +1 to Losses
+
+// Restart game; clear # Guesses Left and Guesses So Far but keep # Wins and # Losses.
+
+
+
+</script>
+
+
+<!-- Count # of wins -->
+<p>Wins:  </p>
+<br>
+
+<!-- Count number of losses -->
+<p>Losses:  </p>
+<br>
+
+<!-- # of guesses left is 10 minus number of guess made -->
+<p>Guesses Left:  </p>
+<br>
+
+<!-- List the letters guess so far in order, up till the 10th guess. When 10 guess have been used up, then add 1 to # of losses. Maybe alert a message saying 'you lost!' -->
+
+<p>Your Guesses So Far:  </p>
+
+</body>
+</html>
